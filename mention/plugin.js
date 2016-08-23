@@ -383,7 +383,7 @@
 
             ed.on('keypress', function (e) {
                 var delimiterIndex = $.inArray(String.fromCharCode(e.which || e.keyCode), autoCompleteData.delimiter);
-                if (delimiterIndex > -1 && prevCharIsSpace()) {
+                if (delimiterIndex > -1) {
                     if (autoComplete === undefined || (autoComplete.hasFocus !== undefined && !autoComplete.hasFocus)) {
                         e.preventDefault();
                         // Clone options object and set the used delimiter.
